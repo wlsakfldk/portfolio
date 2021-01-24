@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="reset.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스시집</title>
+    <style>
+        body {  }
+        #wrap { position: relative; margin: 0 auto; width: 1000px;}
+        #wrap #top { height: 140; }
+        #wrap #top h1 { float: left; }
+        #wrap #top nav { float: right; width: 542px; }
+        #wrap #top nav li { display: inline; }
+        #wrap #top nav li a { display: inline; float: left; 
+                                          padding: 55px 13px 55px; font-size: 18px; font-weight: 400; }
+        #wrap #top nav li a:hover { color: #fff; background: blue; text-decoration: none; }
+
+        /* 본문 contents */
+        #wrap #contents { clear:both; height: 740px;  }
+
+        /* main스시 */
+        #wrap #contents #left { float: left; width: 660px; }
+        #wrap #contents #left #Limg { width: 630px; height: 550px; margin: 10px 0 0 10px; }
+        #wrap #contents #left #Limg img.Limg { width: 630px; border: 5px solid #fff; }
+        #wrap #contents #left p { width: 630px; background: #282c35; 
+                                                  margin: 0 0 30px 10px; border: 5px solid #fff; color: #fff;
+                                                  font-size: 30px; padding: 10px 0 10px 0; }
+        #wrap #contents #left p img { vertical-align: middle; margin-right: 13px; margin-top: 10px; }  
+
+        /* 오른쪽 사이드 메뉴 */
+        #wrap #contents #right { float: right; width: 340px; margin: -10px; }
+        #wrap #contents #right ul { margin: 20px 0 0 0; }
+        #wrap #contents #right ul li { margin: 20px 0 0 20px; }
+        #wrap #contents #right ul li img { display: block; width: 260px; height: 141px; 
+                                                                border: 5px solid #fff; }
+
+        #wrap #contents #right ul li dl { width: 240px; border: 5px solid #fff; padding: 10px;
+                                                            border-top: none; color: #fff; background:blue; 
+                                                            text-align: left; }
+        #wrap #contents #right ul li dt { font-size: 17px; font-weight: bold; }
+        #wrap #contents #right ul li dd { font-size: 13px; padding: 2px; }
+
+        /* event */
+        #event { position: absolute; top: 143px; right: 5px; }
+
+        /* footer */
+        #wrap #footer { clear: both; width: 1000px; height: 120px; color: #fff; }
+        #wrap #footer #f-left { float: left; margin:5px 0 0 24px; } 
+        #wrap #footer #f-left p { float: left; padding-left: 100px; } 
+        #wrap #footer #f-left p:nth-last-child(1) { clear:both; padding-left: 0; } 
+
+        #wrap #footer #f-right { float: right; background: #282c35; width: 270px; margin: 15px 53px; } 
+        #wrap #footer #f-right #p-left { float: left;  padding: 15px 10px; width: 150px; } 
+        #wrap #footer #f-right #p-left span { font-size: 20px; font-weight: bold; } 
+
+        #wrap #footer #f-right #p-right span { float: left; width: 60px; padding-top: 15px; } 
+        #wrap #footer #f-right #p-right a img { padding-top: 15px; }
+
+    </style> 
+</head>
+<body>
+    <div id="wrap">
+        <header id="top">
+            <h1><img src="images/logo.jpg" alt="일식로고"></h1>
+            <nav>
+                <ul>
+                    <li><a href="intex.html" title="홈으로 이동">HOME</a></li>
+                    <li><a href="about.html" title="about으로 이동">ABOUT</a></li>
+                    <li><a href="menu.html" title="MENU으로 이동">MENU</a></li>
+                    <li><a href="specials.html" title="SPECIALS으로 이동">SPECIALS</a></li>
+                    <li><a href="location.html" title="LOCATION으로 이동">LOCATION</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="contents">
+            <div id="left">
+                <div id="Limg">
+                    <img src="images/main.jpg" alt="메인스시" class="Limg"></div>
+                <p><img src="new.jpg" alt="">now open till midnight</p>
+            </div>  <!-- id="left" -->
+            <div id="right">
+                <ul>
+                    <li>
+                        <img src="images/side1.jpg" alt="모듬초밥">
+                        <dl>
+                            <dt>모듬초밥</dt>
+                            <dd>연어초밥3ps광어초밥3ps새우초밥3ps</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <img src="images/side2.jpg" alt="특선초밥">
+                        <dl>
+                            <dt>특선초밥</dt>
+                            <dd>연어초밥5ps 광어초밥5ps</dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <img src="images/side.jpg" alt="우동">
+                        <dl>
+                            <dt>우동</dt>
+                            <dd>생생한 우동</dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div id="event"><img src="images/event.png" alt="25%off"></div>
+            </div><!---id="right" -->
+            <footer id="footer">
+                <div id="f-left">
+                    <p><img src="images/facebook.png" alt="페이스북">like us on facebook</p>
+                    <p><img src="images/twit.png" alt="트위터">follow us on twitter</p>
+                    <p>&copy; 2013 by SUSI's. all rights reserved. </p>
+                </div><!---id="left" -->
+                <div id="f-right">
+                    <p id="p-left"><span>Take Away</span><br>Order now!</p> 
+                    <p id="p-right"><a href="tel:+123456789"><img src="images/phone.png" width="34" height="47" alt=""></a></p>
+                </div>
+            </footer>
+    </div>
+    </main>
+</body>
+</html>

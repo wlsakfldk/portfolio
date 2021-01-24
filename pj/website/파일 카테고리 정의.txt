@@ -1,0 +1,22 @@
+[회원가입]
+css
+- common.css
+- main.css
+- member.css
+- login.css
+
+js
+- member_form.js (입력 양식에 대한 확인-javascript 구성) 
+- login.js
+
+index.php
+header.php (모든 페이지에서 공통 -> common.css)
+footer.php (모든 페이지에서 공통 -> common.css)
+
+
+db_con.php : 데이터 베이스로 접근하려는 조건을 담는다. (전 페이지로부터 재활용)
+
+member_form.php -> member_form.js -> member_insert.php(직접 데이터 베이스로 접근하여 데이터베이스의 지정한 테이블에 값을 넣어준다.)
+
+
+login_form.php -> login.js -> login.php(직접 데이터 베이스로 접근하여 아이디가 일치하는 회원이 존재하는 지를 찾는다. + 패스워드가 일치하는지를 확인)

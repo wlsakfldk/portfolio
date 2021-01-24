@@ -1,0 +1,93 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Poiret+One&display=swap');
+/*
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Poiret One', cursive;
+*/
+*{box-sizing: border-box;}
+html, body{margin: 0; padding: 0; font-family: 'Poiret One','Nanum Gothic', sans-serif;}
+header, section, article, aside, nav, main, footer{display: block;}
+header:after, section:after, article:after, aside:after, nav:after, main:after, footer:after{content:""; display: block; clear: both;}
+h1, h2, h3,h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+
+.font_poiret{font-family: 'Poiret One', cursive;}
+
+
+
+header{position: fixed; width: 300px; height: 100%; }
+header .logo{padding-top: 80px; text-align: center;}
+header .logo a{display: block; height: 140px;}
+header .logo a img{height: 100%;}
+header nav{padding-top: 60px; text-align: center;}
+header nav ul.main{display: inline-block; text-align: left;}
+header nav ul.main li{}
+header nav ul.main li a{display: block; line-height: 36px; color:#555; font-size: 16px;}
+
+header nav ul.main li:nth-child(1) a i{font-style: italic;}
+header nav ul.main li:nth-child(3) a i{transform: rotate(-45deg);}
+
+
+header nav ul.sns{position: absolute; width: 100%; bottom:40px; left:0; font-size: 0;}
+
+header nav ul.sns li{display: inline-block; margin:0 10px;}
+
+
+main{width: calc(100% - 300px); height: auto; background: #aaffaa; margin-left:300px;}
+
+main #top{width: 100%; height: 40px; background: #333;}
+main #top ul{padding: 13px 0;}
+main #top ul li{font-size: 14px; color:#fff; float: left; padding: 0 10px; border-right: 1px solid #fff; line-height: 1;}
+main #top ul li:last-child{border:none;}
+
+
+main section{width: 100%; height: auto; background: #fff;}
+
+main section article{width: 20%; height: 250px; float:left; background-size: cover; background-position: 50% 50%; position: relative;padding-top: 40px; padding-left: 40px; overflow: hidden;}
+
+main section article:nth-child(1){width: 60%; height: 500px; background-image: url(../img/pic1.jpg);}
+main section article:nth-child(2){width: 40%;}
+main section article:nth-child(3){background-color: #6ce2fb;}
+main section article:nth-child(4){background-image: url(../img/pic2.jpg);}
+main section article:nth-child(5){background-image: url(../img/pic5.jpg);}
+main section article:nth-child(6){width: 40%;}
+main section article:nth-child(7){background-image: url(../img/pic13.jpg);}
+main section article:nth-child(8){}
+main section article:nth-child(9){width: 40%; background-color: #6ce2fb;}
+main section article:nth-child(10){background-image: url(../img/pic10.jpg);}
+main section article:nth-child(11){}
+main section article:nth-child(12){background-image: url(../img/pic11.png);}
+
+
+
+main section article h3{font-size: 30px; line-height: 1; font-weight: normal; color:#333;}
+main section article .cont{padding-top: 20px;}
+main section article .cont p{font-size: 14px; color:#555; line-height: 1.6;}
+
+main section article .sign{position: absolute; right:0; bottom:-4px; line-height: 1; font-size: 48px; color:#fff; text-shadow:0 0 4px #000; transform:scale(2); opacity:0; transition: transform 0.5s, opacity 0.5s;}
+
+main section article:hover .sign{transform:scale(1); opacity:1;}
+
+main section article:nth-child(1) .sign{font-size: 160px; transform:rotateY(0deg); opacity:1; bottom:-16px;}
+main section article:nth-child(1):hover .sign{transform:rotateY(360deg);}
+
+
+main section article:nth-child(3) .icon{position: absolute; width: 220px; height: 220px; background-size: 75%; background-position: 50% 50%; background-image: url(../img/iconfinder_refresh27_216529.png); background-repeat: no-repeat; bottom:-50px; right:-50px; animation:rotateIcon 10s infinite linear;}
+@keyframes rotateIcon{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+
+
+main section article:nth-child(9) .icon{position: absolute; width: 220px; height: 220px; background-size: 75%; background-position: 50% 50%; background-image: url(../img/iconfinder_back-alt_134226.png); background-repeat: no-repeat; bottom:-40px; right:-280px; transition: right 0.5s;}
+main section article:nth-child(9):hover .icon{right:-60px;}
+
+main section article:nth-child(3) h3, 
+main section article:nth-child(9) h3, 
+main section article:nth-child(3) p, 
+main section article:nth-child(9) p{color:#fff;}
+
+main #footer{width: 100%; height: 40px; background: #333;}
+main #footer p{font-size: 14px; padding: 0 10px; color:#fff; line-height: 40px;}
+

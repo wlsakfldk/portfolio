@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+#main{position: relative; width: 100%; height: 100vh; background: linear-gradient(to bottom, #45484d 0%,#000000 100%);}
+
+#main .center_btn{position: absolute; top:50%; left:50%; transform:translate(-50%, -50%);}
+
+#main .center_btn a{display: block; width: 180px; height: 60px; margin: 0 auto; font-size: 24px; line-height: 60px; overflow: hidden; transition:all 0.2s; position: relative; color:#2196f3; text-align: center;}
+
+#main .center_btn a:hover{color:#fff; background: #2196f3; transition-delay: 1s; box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;}
+
+#main .center_btn a:nth-child(1){margin-bottom: 20px;}
+
+#main .center_btn a span{position: absolute; display: block;}
+
+#main .center_btn a span:nth-child(1){top:0; left:-100%; width: 100%; height: 2px; background:linear-gradient(90deg, transparent, #2196f3);}
+#main .center_btn a:hover span:nth-child(1){left:100%; transition: left 1s;}
+
+#main .center_btn a span:nth-child(2){top:-100%; right:0; width: 2px; height: 100%; background: linear-gradient(180deg, transparent, #2196f3);}
+#main .center_btn a:hover span:nth-child(2){top:100%; transition: top 1s; transition-delay: 0.25s;}
+
+#main .center_btn a span:nth-child(3){bottom:0; right:-100%; width: 100%; height: 2px; background: linear-gradient(270deg, transparent, #2196f3);}
+#main .center_btn a:hover span:nth-child(3){right:100%; transition: right 1s; transition-delay: 0.5s;}
+
+#main .center_btn a span:nth-child(4){bottom:-100%; left:0; width: 2px; height: 100%; background: linear-gradient(0deg, transparent, #2196f3);}
+#main .center_btn a:hover span:nth-child(4){bottom:100%; transition:bottom 1s; transition-delay: 0.75s;}
+

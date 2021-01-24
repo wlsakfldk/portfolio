@@ -1,0 +1,9 @@
+@charset "utf-8";
+*{box-sizing: border-box;}
+html,body{margin: 0; padding: 10px;}
+h2{text-align: center; border-bottom: 1px solid #ccc; padding: 10px 0; font-size: 22px; line-height: 1; color:#555;}
+#idChk_txt{text-align: center; font-size: 15px; padding: 10px; border-bottom: 1px solid #ccc;}
+#idChk_txt p{color:#777;}
+#close{text-align: center; padding-top: 10px;}
+#close button{padding: 10px 20px; border-radius:4px; border:none; background: #21bda1; color:#fff; cursor: pointer;}
+#close button:hover{background: #019d81;}

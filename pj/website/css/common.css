@@ -1,0 +1,63 @@
+@charset "utf-8";
+*{box-sizing: border-box;}
+html, body{margin: 0;padding: 0;}
+header, section, aside, article, main, nav, footer{display: block;}
+header:after, section:after, aside:after, article:after, main:after, nav:after, footer:after{content:""; display: block; clear: both;}
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+.clear{clear: both;}
+
+
+/*header_part*/
+header #top{width: 100%; height: 30px; border-bottom: 1px solid #ccc;}
+header #top .frame{width: 1200px; margin: 0 auto; padding: 0 20px;}
+header #top .frame .top_info{float: left;}
+header #top .frame .top_info p{text-transform: uppercase; line-height: 30px; color:#aaa; font-size: 14px;}
+
+header #top .frame #top_menu{float: right; padding: 8px 0; font-size: 0;}
+header #top .frame #top_menu li{display: inline-block; border-right:1px solid #ccc; padding: 0 5px; font-size: 14px; line-height: 1;}
+header #top .frame #top_menu li:last-child{border:none; padding-right:0;}
+header #top .frame #top_menu li a{color:#aaa; display: block;}
+header #top .frame #top_menu li:hover a{color:#555;}
+
+header nav{border-bottom: 1px solid #ccc; height: 48px;}
+header nav .frame{width: 1200px; margin: 0 auto; padding: 0 20px;border-left:1px solid #ccc; border-right:1px solid #ccc;}
+
+header nav .frame:after{content:""; display: block; clear: both;}
+
+header nav .frame .logo{float: left; padding: 6px 0;}
+header nav .frame .logo a{display: block;}
+header nav .frame .logo a img{display: block; height: 36px;}
+
+header nav .frame #menu_bar{float: right;}
+header nav .frame #menu_bar ul{font-size: 0;}
+header nav .frame #menu_bar ul li{display: inline-block; margin-left: 50px;}
+header nav .frame #menu_bar ul li a{display: block; line-height: 48px; color:#777; font-size: 16px;}
+header nav .frame #menu_bar ul li a:hover{color:#333;}
+
+
+
+/*footer 파트*/
+footer{background-color: #2c2a29;}
+#footer_content{width: 1200px; margin: 0 auto; padding: 0 20px; text-align: center;}
+#footer_cont{font-size: 14px; padding: 20px 0; color:#fff;}
+#footer_cont span{color:#ffff00;}
+
+
+
+/*subpage 상단*/
+#main_img_bar.subpage{height: 220px;}
+#main_img_bar.subpage .main_img_cont{background-image: url(../img/hero-art-large.jpg); background-size: cover; background-position: 50% 50%; height: 100%;}
+#main_img_bar.subpage .main_img_cont .frame{width: 1200px; height: 100%; margin: 0 auto; padding: 0 20px;}
+#main_img_bar.subpage .main_img_cont .frame .main_img_txt{width: 50%; height: 100%; position: relative;}
+#main_img_bar.subpage .main_img_cont .frame .main_img_txt .main_img_title{position: absolute; top:50%; left:40px; transform: translateY(-50%);}
+
+#main_img_bar.subpage .main_img_cont .frame .main_img_txt .main_img_title h3{font-size: 24px; color:#888; padding-bottom: 20px;}
+
+#main_img_bar.subpage .main_img_cont .frame .main_img_txt .main_img_title h3 span{color:#21bda1;}
+
+#main_img_bar.subpage .main_img_cont .frame .main_img_txt .main_img_title h1{font-size: 40px; color:#555;}
+
+
+

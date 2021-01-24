@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+
+body { overflow-x:hidden; 
+margin: 0 auto; 
+
+}
+ 
+ .frame { width: 2000px; 
+     height: 70px; 
+     background: #fff; 
+     position: relative;
+     z-index: 1;
+      }
+ 
+      
+ .back { 
+     position: absolute;
+     left: 12%;
+     z-index: 1;
+  }
+ 
+ .back2 { 
+     position: absolute;
+     height: 80px;  
+     background: #fff; 
+     left: 18%; 
+     z-index: 1;}
+ 
+ .btn { background: #5e889e;
+     padding: 10px 15px; 
+     border-radius: 5px; 
+     color: #fff; 
+     font-weight: normal;
+     position: absolute; 
+     top: 15px;
+     left: 63%; 
+     z-index: 1;
+
+     }
+ 
+ .nav { position: absolute;
+    z-index: 1;
+     top:0; 
+     left: 30%;
+     top: 25px;
+
+     /* margin: 25px 100px; */
+  }
+ 
+ .nav li { 
+     display: inline; 
+     padding-right: 30px;
+
+     }
+ 
+ .nav li a { 
+     font-size: 16px;
+     font-weight: normal;
+     color:#5c5c5c;
+     border-bottom: none;
+     padding-bottom: 26px;
+     }
+ 
+ .nav li a:hover { color: #755562; 
+     border-bottom: 1px solid #755562;}
+ 
+ .clo {position: relative;
+    width: 100%;
+    height: 316px;
+    top: -50px;
+ }
+
+ .clo2 { position: absolute;
+    /* top: 68%; */
+    z-index: 1;
+    width: 100%;
+    height:42%;
+    
+    background-image: url(../img/cloud.png);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    animation: move 60s infinite;
+}
+ 
+ @keyframes move {
+     0% {
+         background-position: 0% 100%;
+     }
+ 
+     50% {
+         background-position: 100% 100%;
+     }
+ 
+     100% {
+         background-position: 0% 100%;
+     }
+ }
+
+
+.login h6 { position: relative;
+    z-index: 1;
+    font-size: 30px;
+    font-weight: normal;
+    color: #666; 
+    text-align: center; 
+    vertical-align: center;}
+
+.login span { font-weight: bold;
+    font-size: 30px; }
+    
+
+.box { position: absolute;
+    width: 380px;
+    height: 320px;
+    background: url(../img/sub/plant.png)no-repeat;
+    background-size: contain;
+    float: right;
+    top: 46%;
+    left: 55%;
+    margin: 50px 10px 0 10px;
+}
+
+.login p { position: relative;
+    z-index: 1;
+    top:10px; 
+    left: 22%;
+    margin: 10px 0; 
+    font-weight: normal;
+    font-size: 16px; 
+    color: #666; 
+}
+
+.box2 { position: absolute;
+    width: 380px;
+    height: 320px;
+    background: url(../img/sub/plant.png)no-repeat;
+    background-size: contain;
+    top: 46%;
+    left: 55%;
+    margin: 50px 10px 0 10px;
+}
+
+
+.login2 p { position: relative;
+    z-index: 1;
+    top: 30px; 
+    left: 43%;
+    margin: 10px 0; 
+    font-weight: normal;
+    font-size: 16px; 
+    color: #666; 
+}
+
+.login2 .box2 { position: absolute;
+    width: 380px;
+    height: 320px;
+    background: url(../img/sub/certificate.png)no-repeat;
+    background-size: contain;
+    top: 94.5%;
+    left: 21.5%;
+    margin: 50px 10px 0 10px;}
+
+
+.footer_inn { position: absolute;
+    z-index: 1;
+    background: #5c5c5c;
+    width: 100%;
+    height: 160px;
+    top: 145%;
+     }
+             
+.txt_left p { position: absolute;
+    left: 250px; 
+    top: 35%;
+    color: #fff; 
+    font-size: 14px;
+    font-weight: normal; 
+    cursor: default;
+    }
+    
+.icon_right img { width: auto;
+    height: 36px;}
+.icon_right li { position: relative;
+    z-index: 2;
+    display: inline-block;
+    left: 1330px; 
+    top: 62px;
+    }
+
+ 

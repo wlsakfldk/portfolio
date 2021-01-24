@@ -1,0 +1,14 @@
+[회원가입]
+css
+- common.css
+- main.css
+- member.css
+- login.css
+
+js
+- member_form.js (입력 양식에 대한 확인-javascript 구성) 
+- login.js
+
+index.php
+header.php (모든 페이지에서 공통 -> common.css)
+footer.php (모든 페이지에서 공통 -> common.css)

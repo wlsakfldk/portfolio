@@ -1,0 +1,271 @@
+@charset 'utf-8';
+/* 모바일용 CSS */
+/* 기본 CSS */
+#wrap { display: flex; flex-flow: column nowrap; 
+                width: 80%; margin: 0 auto; max-width: 1200px; }
+
+#wrap section { box-sizing: border-box; }
+
+/* 인포메이션 영역  */
+.info-section { order: 1; width: 100%; background: #2ecc71; 
+                        border-bottom: 1px solid #39d67c; }
+        
+.info-list { display: flex; } 
+.info-list li { width: 25%; text-align: center; } 
+
+.info-list li a { display: block; padding: 15px 0; padding: 0.938rem 0; }
+
+/* 헤더 영역 CSS */
+.header { display: flex; order: 2; flex-direction:column; 
+                position: relative; width: 100%; }
+.logo { order: 1; width: 100%; padding: 30px 0; padding: 1.875rem 0; 
+    font-size: 1.188em; font-size: 1.188rem; 
+    line-height: 21px; line-height: 1.313rem; 
+    text-align:center; text-transform: uppercase;
+    background: #2ecc71; 
+    text-shadow: 0 1px 1px #25ab5e; 
+}
+
+.nav { order: 2; width: 100%; }
+.gnb { display: none; }
+
+.gnb li { display: flex; background: #2c3e50; }
+.gnb li a { width: 80%; padding: 20px 0; padding: 1.250rem 0; 
+                font-size: 0.938em; font-size: 0.938rem; 
+                text-indent: 20px; text-indent: 1.250rem; 
+                font-weight: bold; text-transform: uppercase; }
+
+.gnb li span { width: 20%; text-indent: -99999px; 
+                        background: url('../images/s_images/sub_menu_toggle_btn.png')
+                        no-repeat center; cursor: pointer;  }
+
+.menu-toggle-btn { display: block; width: 30px; width: 1.875rem; 
+                                height: 30px; height: 1.875rem; position: absolute; right: 10px; 
+                                right: 0.625rem; top: 10px; top: 0.625rem; text-indent: -99999px; 
+                                background: url('../images/s_images/menu_toggle_btn.png') 
+                                no-repeat; cursor: pointer; 
+}
+
+/*슬라이더 영역*/
+.slider-section { order: 3; width: 100%; height: 300px;  height: 18.75rem;
+                        display: flex; 
+                        justify-content: space-between; 
+                        align-items: center;
+                        background: url('../images/p_images/slider_01.jpg')
+                        center no-repeat; }
+.slider-section span { width: 34px; width: 2.125rem; height: 39px; height: 2.438rem; 
+                                    text-indent: -99999px; background: url('../images/s_images/slider_arrow.png')
+                                    no-repeat; cursor: pointer; }
+
+span.prev-btn { margin-left: -10px; margin-left: -0.625rem; 
+                            background-position: 0 0; }
+                        
+span.next-btn { margin-right: -10px; margin-right: -0.625rem; 
+                            background-position: -34px 0; }
+
+/* 최근글 영역, 인기 글 영역 */
+.latest-post-section { order: 4; 
+                    background: #ffc40f; text-shadow: 0 1px 1px #b98e06; 
+}
+
+.popular-post-section { order: 5; 
+                    background: #a660c2; text-shadow: 0 1px 1px #714185; 
+}
+
+.latest-post-section, .popular-post-section { padding: 40px 12.5%; padding: 2.500rem 12.5%; } /*40px/320px *100가 12.5%*/
+
+.title { margin-bottom: 30px; margin-bottom: 1.875em; 
+            font-size: 1.188em; font-size: 1.188rem; text-align: center; color: #ffffff; }
+
+.latest-post-section li, .popular-post-section li { margin-top: 15px; margin-top: 0.938rem; 
+            margin-top:15px; margin-top:0.938rem;
+            padding-left: 14px; padding-left: 0.875rem; 
+            background: url('../images/s_images/post_circle_icon.png') no-repeat left center; 
+            font-weight: bold; text-transform: uppercase; 
+}
+
+.latest-post-section li:first-child, .popular-post-section li:first-child {
+    margin-top: 0; 
+}
+
+/* 갤러리 영역 */
+.gallery-section { order: 6; background: #e65d5d; padding: 50px 12.5%; 
+    padding: 3.125rem 12.5%; text-align: center; text-shadow: 0 1px 1px #c43434;  }
+
+.gallery-section img { width: 100%; max-width: 100%; 
+    border-radius: 3px; box-shadow: 0 1px 1px #c43434; }
+
+.gallery-section li:nth-child(2) { margin-top: 30px; margin-top: 1.875rem; }
+
+.gallery-section li figcaption { margin-top: 20px; margin-top: 1.150rem; 
+    font-size: 1.188em; font-size: 1.188rem; text-transform: uppercase; font-weight: bold; }
+
+/* 인기 검색어 영역 */
+.rankup-section { order: 7; background: #219af7; padding: 40px 12.5%; 
+    padding: 2.500rem 12.5%; text-shadow: 0 1px 1px #1974ba; 
+}
+.rankup-list { display: flex; flex-wrap: wrap; justify-content: space-between; } 
+.rankup-list li { width: 47.91666666666667%; text-align: center; 
+    margin-top: 15px; margin-top: 0.938rem; font-weight: bold; 
+    text-transform: uppercase; } /* 115px/240px(320-40-40) * 100 */
+.rankup-list li a { display: block; padding: 10px 0; 
+    padding: 0.625rem 0; border: 1px solid #ffffff; border-radius: 5px; 
+} 
+.rankup-list li:first-child,
+.rankup-list li:nth-child(2) { margin-top: 0; }
+
+/* 배너 영역} */
+.banner-section { order: 8; }
+.banner-box01 { background: #e6567a; }
+.banner-box01 a { display: block; padding: 30px 0; padding: 1.875rem 0; 
+    text-align: center; } /*패딩이나 마진줄때 디스플레이를 블럭으로 함*/ /*li는 인라인 요소*/
+.banner-box02 { background: #c44968; }
+.banner-list { display: flex; justify-content: space-between; padding: 30px 12.5%;  
+    padding: 1.875rem 12.5%; 
+}
+
+/* 소셜 네트워크 영역 */
+.social-section { order: 9; padding:24px 12.5%; 
+    padding:1.500rem 12.5%; background: #ffffff; }
+.social-list { display: flex; justify-content: space-between; 
+} /*이미지 만들때 딱 맞추기*/
+
+/* 푸터 */
+.footer { order: 10; background: #474747; width: 100%; }
+.footer p { padding: 20px; padding: 1.250rem; font-size: 0.813em;
+    font-size: 0.813rem; text-align: center; font-weight: bold; color: #ffffff; 
+    text-transform: uppercase; text-shadow: 0 1px 1px #191919; 
+}
+    /*폰트 사이즈 줄때 em, rem같이 씀 텍스트 트랜스폼 어퍼케이스는 영대문자*/
+
+/* ----------------------------------태블릿용 CSS------------------------------------- */
+@media all and (min-width: 768px) {
+    #wrap { flex-flow: row wrap; }
+
+    /* 헤더 영역 */
+    .header { flex-direction: row; } 
+    .logo { position: absolute; top: 0; left: 0; width: 15.625%; 
+        padding: 0; z-index: 10; } /*소수점 붙으면 대부분 퍼센트*//*가린것을 보이게 제트인덱스*/
+
+    .logo a { display: block; padding: 50px 0; padding: 3.125rem 0; } /*좌우 유지할때 0 */
+    .nav { position: relative; min-height: 80px; min-height: 5.000rem; 
+        background: #2ecc71; }
+    .menu-toggle-btn { top: 50%; right: 30px;  right: 1.875rem; margin-top: -15px; margin-top: -0.938rem; 
+        z-index: 20; } /*옆으로 떨어지게 오른쪽 너비확인 후 롸이트*//*기준중심이 왼쪽위*/
+                            /*15는 버튼 이미지 크기*/
+
+    .gnb {position: absolute; top: 100%; right: 0; width: 40.10416666666667%;
+        } /*100%로 할때 밑으로 배치 0은 위로배치 *//*너비 확인후 나눈값*/
+
+/* 슬라이더 영역 */
+.slider-section { width: 59.89583333333333%; height: auto; } /* 460px/768px * 100,%빼먹지말기 */
+                                                                                                /*오토 기준값 유지*/
+.slider-section span { position: relative; z-index: 10; }
+
+/* 최신글 영역,인기글 영역 */
+.latest-post-section { order: 5; }
+.popular-post-section { order: 6; }
+
+.latest-post-section, .popular-post-section { width: 41.66666666666667%;
+    padding-left: 5.20833333333333%; padding-right: 5.20833333333333%; }
+
+/* 갤러리 영역 */
+.gallery-section { order: 8; width: 71.35416666666667%; /*전체너비 548px*/
+    padding-left: 5.20833333333333%; padding-right: 5.20833333333333%; }
+.gallery-list { display: flex; } 
+.gallery-list li { width: 47.00854700854701%; } 
+.gallery-list li:nth-child(2) { margin-top: 0; 
+    margin-left: 5.98290598290598%; } 
+
+/* 인기 검색어 영역 */
+.rankup-section { order: 4; width: 40.10416666666667%; 
+    padding-left: 5.20833333333333%; padding-right: 5.20833333333333%; } /*308px/768px *100*/
+
+/* 배너 영역 */
+.banner-section { order: 9; display: flex; flex-direction: column; 
+    width: 28.64583333333333%; }
+.banner-section div { flex: 1 1 0; }
+.banner-box01 { display: flex; justify-content: center; 
+    align-items: center; } 
+.banner-box01 a { display: inline; padding: 0; } 
+.banner-box02 { display: flex; justify-content: center; 
+    align-items: center; } 
+.banner-list { padding: 0; justify-content: flex-start; }
+.banner-list li:nth-child(2) { margin: 0 14px; margin: 0 0.875rem;  }
+
+/* 소셜 네트워크 영역 */
+.social-section { order: 7; display: flex; justify-content: center; 
+    align-items: center; width: 16.66666666666667%; padding: 0; }
+.social-list { flex-direction: column; justify-content: flex-start; }
+.social-list li:nth-child(2) {margin: 24px 0; margin: 1.500rem 0; } /*너비를 구할때 대상/ 전체감싸는 대상*/
+
+/* 푸터 영역 */
+.footer p { padding: 40px 0; padding: 2.500rem 0; }
+
+}
+
+/*-----------------------------------데스크탑용 -------------------------------------*/
+@media all and (min-width: 960px) {
+#wrap { width: 90%; position: relative; } /*부모요소 릴레이티브*/
+.info-section { order: 0; position: absolute; top: 30px; top: 1.875rem; 
+    right: 30px; right: 1.875rem; z-index: 30; width: auto; border-bottom: 0; }
+.info-list li { width: auto; margin-left: 10px; margin-left: 0.625rem; }
+.info-list li a { padding: 0; }
+
+/*헤더 영역*/
+.header { order: 1; justify-content: flex-end; position: static; } /*스타틱 원래상태*/
+.logo { width: 12.5%; }
+.nav  { display: flex; align-items: center; position: static; width: 87.5%; }
+.gnb { display: flex !important; flex-direction: row; position: static;  /*임폴턴트 제일 우선순위 */
+    width: 100%; text-shadow: 0 1px 1px #25ab5e;  } /*로우는 옆으로 배열*/
+.gnb li { display: block; margin-left: 5.95238095238095%; background: none; } /*배경색지울때 백그라운드 넌으로 */
+.gnb li a { width: auto; padding: 0; text-indent: 0; }
+.gnb li span { display: none; }
+.menu-toggle-btn { display: none; }
+
+/* 슬라이더 영역 */
+.slider-section { order: 2; width: 50%; } /*40px/960px*100*/
+
+/* 최신글 영역, 인기글 영역 */
+.latest-post-section {order: 5;}
+.popular-post-section {order: 6;}
+
+.latest-post-section, .popular-post-section { width: 30%;  
+    display: flex; flex-direction: column; align-items: center; 
+    padding-left: 0; padding-right: 0; }
+    
+/* 갤러리 영역 */
+.gallery-section { order: 3; width: 27.08333333333333%; }/*260px/960px*100*/
+.gallery-list { display: block; } /*블럭처리하면 내려감*/
+.gallery-list li { width: auto; }  /*오토 넣으면 가운데배치 */
+
+.gallery-list li:nth-child(2) { margin-left: 0; margin-top: 30px; 
+    margin-top: 1.875rem; }  /*가상 선택자 두번째 줬떤마진을 없애려고 0 보라색도 적용*//*아이콘 위 하이재서 30*/
+
+/* 인기 검색어 영역 */ 
+.rankup-section { order: 4; width: 22.91666666666667%; } /*220px/960px*100*/
+.rankup-list { display: block; } 
+.rankup-list li { width: auto; text-align: left; 
+    counter-increment: rankup-counter; } 
+.rankup-list li:nth-child(2) { margin-top: 15px; margin-top: 0.938rem; }
+.rankup-list li:before { padding-right: 6px; padding-right: 0.375rem; 
+    color: #ffffff; content: counter(rankup-counter) '.' ; } 
+.rankup-list li a { display: inline; padding: 0; border: 0; } 
+
+/* 배너영역 */
+.banner-section { order: 7; width: 22.91666666666667%; } /*220px/960px*100*/
+
+/* 소셜 네트워크 영역 */
+.social-section { order: 8; width: 17.08333333333333%; }
+
+/* 푸터영역 */
+.footer { order: 9; }
+.footer p { text-align: left; padding-left: 3.125%; } /*30px/960*100*/ 
+
+
+
+
+
+}
+
+

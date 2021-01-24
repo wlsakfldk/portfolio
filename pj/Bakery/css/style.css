@@ -1,0 +1,107 @@
+@charset 'utf-8';
+/* 기본 설정 */
+* { margin: 0 auto; 
+    padding: 0; 
+    list-style: none; 
+    font-family: '맑은고딕'; }
+a { color: inherit; 
+    text-decoration: none; }
+button { cursor: pointer; }
+body, html { min-width: 960px; }
+.wrap { width: 960px; } 
+.clear { clear: both; 
+    position: inherit; }
+/* header */
+header { height: 130px;
+     }
+#header-logo { padding-top: 20px; } 
+.logo { float: left; 
+    overflow: hidden; }
+nav { float: right; 
+    margin-top: 30px;
+    padding: 10px; }
+.nav { width: 600px; 
+    height: 20px; }
+.nav > li { float: left;    
+    width: 200px;
+    text-align: center;  }
+.nav > li:hover { background: #7b422e;
+    color: #ffffff; }
+.submenu { display: none; }
+
+/* 메인이미지 */
+#imageslide { height: 400px;
+    position: relative; }
+.imgs img { width: 100%; 
+    position: absolute; }
+.welcome { position: absolute; 
+    background: rgba(255,255,255,0.8); 
+    text-align: center; 
+    width: 300px;
+    height: 100px; 
+    line-height: 50px; 
+    top: 50%;
+    left: 50%; 
+    margin-left: -150px;
+    margin-top: -50px;
+    border-radius: 10px; }
+.welcome h1 { color: #bb692d; 
+    margin-bottom: 10px; }
+.welcome h3 { color: #6a6a6a; 
+    margin-bottom: -10px; } 
+/* 본문 */
+#contents { height: 500px;
+     }
+.notice { float: left; 
+    margin-top: 20px;
+    width: 480px; }
+.notice h2 { text-align: center; 
+    padding-bottom: 10px; 
+    border-bottom: solid 1px #666666; }
+.table { border-collapse: collapse;
+    font-size: 0.9em; 
+    color: #666666;
+    width: 430px; }
+.table tr th { padding: 5px 0;
+    }
+.table tr td { padding: 5px; }
+.table tr:nth-child(even) { background: rgba(153,153,102,0.5); }
+.partner { float: right; 
+    margin-top: 20px;
+    width: 480px; }
+.partner h2 { text-align: center; }
+.partner-info { margin-top: 10px; 
+    padding-left: 20%; }
+.partner-info img:nth-child(1) { width: 60%;
+    cursor: pointer; }
+.partner-info img:nth-child(2) { width: 40%;
+    cursor: pointer; }
+img { max-width: 100%; }
+.icon { margin-top: 20px; }
+.icons { text-align: center; }
+.btn { width: 160px; margin:0 20px; 
+    display: inline-block; }
+.btn button:hover { background: #99cc66; }
+button { padding: 10px; 
+    background: #bb692d;
+    color: #ffffff;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px; }
+footer { height: 150px;
+    max-width: 100%;
+    margin-top: 30px;  
+    background: #bb692d;
+    color: #ffffff; }
+footer .wrap { padding: 10px 20px; }
+footer ul { width: 50%;
+    float: left; }
+footer ul li { float: left; 
+    margin-left: 20px; 
+    margin-top: 30px; 
+    }
+footer address { width: 50%; 
+    float: right;
+    font-size: 12px; 
+    font-style: normal; 
+    margin-top: 20px; }

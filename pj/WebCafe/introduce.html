@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="parkSJ">
+  <meta name="keywords" content="웹표준, 웹접근성, html5, css3, 레이아웃">
+  <meta name="discription" content="html5+CSS3 예제 연습">
+  <meta name="robots" content="all">
+  <title>WebCafe</title>
+  <link rel="shortcut icon" href="images/common/webcafe.png">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/sub.css">
+</head>
+<body>
+  <!-- 건너뛰기 시작 -->
+  <a href="#contentsArea" id="skipNav">본문 바로가기</a>
+  <!-- id="wrapper" 시작 -->
+  <div id="wrapper">
+    <header id="header">
+      <h1 class="logo">
+        <a href="index.html"><img src="images/logo.png" alt="webcafeLogo"></a>  
+      </h1>
+      <ul class="infoLink">
+        <li><a href="index.html">홈</a></li>
+        <li><a href="logoin.html">로그인</a></li>
+        <li><a href="join.html">회원가입</a></li>
+        <li><a href="sitemap.html">사이트맵</a></li>
+        <li><a href="english.html">ENGLISH</a></li>
+      </ul>  <!-- /class="infoLink" -->
+      <nav>
+        <h1 class="hidden">메인메뉴</h1>
+        <ul class="mainMenu">
+          <li><a href="">HTML에 대하여</a>
+              <ul class="aboutHtml">
+                <li><a href="introduce.html">HTML5 소개</a></li>
+                <li><a href="#">레퍼런스 소개</a></li>
+                <li><a href="#">활용 예제</a></li>
+              </ul>
+          </li>
+          <li><a href="#">CSS에 대하여</a>
+              <ul class="aboutCss">
+                <li><a href="#">CSS 소개</a></li>
+                <li><a href="#">CSS vs CSS3</a></li>
+                <li><a href="#">CSS 애니메이션</a></li>
+                <li><a href="#">CSS Framework</a></li>
+              </ul>
+          </li>
+          <li><a href="#">웹표준</a>
+              <ul class="webStandard">
+                <li><a href="#">웹표준이란</a></li>
+                <li><a href="#">W3C</a></li>
+                <li><a href="#">HTML의 현재와 미래</a></li>
+              </ul>
+          </li>
+          <li><a href="#">웹접근성</a>
+              <ul class="webAccessibility">
+                <li><a href="#">웹 접근성의 개요</a></li>
+                <li><a href="#">장애 환경의 이해</a></li>
+                <li><a href="#">장차법</a></li>
+                <li><a href="#">웹 접근성 품질 마크</a></li>
+              </ul>
+          </li>
+          <li><a href="#">묻고 답하기</a>
+            <ul class="qna">
+              <li><a href="qna.html">묻고 답하기</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">1대1 질문</a></li>
+              <li><a href="#">웹표준</a></li>
+              <li><a href="#">웹접근성</a></li>
+            </ul>
+          </li>
+          <li><a href="#">자료실</a>
+            <ul class="archive">
+              <li><a href="#">공개 자료실</a></li>
+              <li><a href="gallery.html">이미지 자료실</a></li>
+              <li><a href="#">웹 표준 자료실</a></li>
+              <li><a href="#">웹 접근성 자료실</a></li>
+            </ul>
+          </li>
+        </ul> <!-- /class="mainMenu" -->
+      </nav>
+    </header>
+    
+    <div id="visual">
+      <p>Web Standard &amp; Accessibility</p>
+    </div>
+    <div id="contentsArea">
+      <section id="contents" class="html5Intro">
+        <p class="location">Home &gt; HTML5에 대하여 &gt;<span>HTML5소개</span> </p>
+        <h1>HTML5 소개</h1>
+
+        <h2> HTML5란?</h2>
+        <p>HTML5는 웹 표준 기구인 W3C에서 만들고 있는 차세대 웹표준안으로 마이크로소프트, 모질라, 애플, 구글, 오페라 등 모든 웹 브라우저 벤더가 참여하고 있는 산업 표준이다.</p>
+        
+        <p>2004년 웹 브라우저 벤터와 개발자 커뮤니티가 주축이 된 웹 하이퍼텍스트 애플리케이션 워킹그룹(WHATWG)의 초안으로부터 시작된 이 표준안은 웹 브라우저 호환성, 구조적이고 의미적 맠트업 및 편리한 웹폼 기능을 제공하여 웹 개발자들의 생산성을 높임과 동시에 리치 웹 애플리케이션을 개발 할 수 있는 다양한 자바스크립트 API를 포함하고 있다.</p>
+        
+        <p>2007년부터 W3C의 HTML W/G에서 HTML5 표준안으로 개발되고 있는 동시에 최신 버전의 웹 브라우저에서 빠르게 탑재되고 있어 차세대 웹 서비스 개발의 주요 기술로서 각광 받을 전망이다.</p>
+        
+        <h2>HTML5의 목적</h2>
+        <p>HTML5는 다음과 같은 몇가지 목적을 가지고 있습니다.</p>
+        
+        <ul>
+          <li>HTML, CSS, DOM, JavaScript를 기반으로 새로운 것을 만들 것</li>
+          <li>플래시 등과 같이 외부 플러그인에 의존하지 않도록 할 것</li>
+          <li>Javascript를 사용하지 않고 Markup 만으로 많은 일을 가능하도록 할 것</li>
+          <li>다양한 디바이스로 부터 독립적이어야 할 것</li>
+          <li>에러 핸들링이 더 좋아지도록 할 것</li>
+          <li>개발과정을 모두에게 공개할 것</li>
+        </ul>
+        
+
+      </section> <!-- /id="contents"  -->
+      <aside id="twitter">
+        <h1>twitter</h1>
+        <article class="twitterArticle">
+          <img src="images/seulbinim.jpg" alt="" class="twitterUserProfile">
+          <a href="#" class="twitterUserName">seulbinim</a>
+          <p class="twitterContent">슬비네에서 웹표준 핵심 가이드북 출시 기념으로 <mark>HTML5</mark> 교육을 무료로 진행한다고 합니다. <mark>HTML5</mark>에 관심 있는 분들은 슬비네로 문의 하시기 바랍니다.</p>
+          <time class="twitterDate"  datetime="2018-10-04">2018년 10월 4일</time>
+        </article>
+        <article class="twitterArticle">
+          <img src="images/miheeya.jpg" alt="" class="twitterUserProfile">
+          <a href="#" class="twitterUserName">miheeya</a>
+          <p class="twitterContent"><mark>HTML5</mark>도 HTML4.01과 똑 같은 마크업 언어입니다. <mark>HTML5</mark>를 사용한다고 해서 웹표준을 준수하지 않는 다거나 웹접근성이 떨어지는 것은 아닙니다.</p>
+          <time class="twitterDate" datetime="2018-10-04">2018년 10월 4일</time>
+        </article>
+      </aside>
+    </div>
+    <section id="slogan">
+      <h1>Web Cafe 슬로건</h1>
+      <p><q>The power of the Web is in its universality, Access by everyone regardless of disability is an essential aspect.</q>Tim Berners - Lee , W3C Director and inventor of the World Wide Web</p>
+      <footer class="hidden">출처:World Wide consortium-http://www.w3.org/WAI</footer>
+    </section>
+    <footer id="footer">
+      <div id="footerInner">
+        <a href="index.html" class="footerLogo">
+          <img src="images/footer_logo.png" alt="WebCafelogo"></a>
+        <section class="guide">
+          <h1 class="hidden">사이트 이용안내</h1>
+          <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">개인정보 보호정책</a></li>
+            <li><a href="#">이메일 주소 무단 수집거부</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Site map</a></li>
+          </ul>
+        </section>
+        <address>
+          <span>서울시 도봉구 도봉로 500번지</span>
+          <span>전화 :02-222-1111</span> 
+          <span>E-mail : <a href="mailto:webmaster@wecafe.com">webmaster@webcafe.com</a></span>
+        </address>
+        <p class="copyright">Copyright since &copy; 2010 by webcafe Corporation all rights reserved</p>
+        <div class="techLogoArea">
+          <img src="images/html5_logo.png" alt="HTML5logo">
+          <img src="images/css3_logo.png" alt="CSS3logo">
+        </div><!-- /class="techLogoArea -->
+      </div><!-- /id="footerInner" -->
+    </footer>
+  </div> <!-- /id="wrapper" -->
+</body>
+</html>

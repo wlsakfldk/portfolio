@@ -1,0 +1,20 @@
+@charset "utf-8";
+/*로그인 양식*/
+#main_content{width: 600px; margin: 0 auto; padding: 0 20px;}
+
+#login_box{}
+#login_box #login_title{padding: 20px 0; border-bottom: 1px solid #ccc;}
+#login_box #login_title span{font-size: 24px; font-weight: bold; color:#555;}
+#login_box #login_form{padding: 40px 0;}
+#login_box #login_form ul{}
+#login_box #login_form ul li{padding: 10px 0;}
+#login_box #login_form ul li input{width: 80%; margin: 0 auto; height: 42px; padding:0 10px; border:1px solid #ccc; border-radius:4px; display: block;}
+
+#login_box #login_form #login_btn{padding: 20px 0; text-align: center;}
+
+#login_box #login_form #login_btn button{width: 80%; height: 42px; font-size: 20px; font-weight: bold; border:none; border-radius: 4px; background-color: #21bda1; color:#fff; cursor: pointer;}
+
+#login_box #login_form #login_btn button:hover{background-color: #019d81;}
+
+
+

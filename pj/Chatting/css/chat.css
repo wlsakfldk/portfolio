@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+header{height: 60px; background-color: #363636;}
+header .logo{padding: 10px 0; text-align: center; height: 100%;}
+header .logo a{display: block; height: 100%; color:#fff; font-size: 24px; line-height: 40px;}
+
+section{height: calc(100vh - 60px); background-color: #222;}
+section article{height: 80%; padding: 20px; border: 1px solid #ffff00;}
+section article ul{height: 100%; overflow-y: auto;position: relative;}
+section article ul::-webkit-scrollbar{width: 0;}
+
+section article ul li{font-size: 15px; color:#fff; margin-top: 20px; display: block;}
+
+section article ul li p{font-size: 13px; color:#fff;}
+
+section article ul li span{display: inline-block; background-color: rgba(0,0,0,0.5); padding: 20px; border-radius:8px;}
+
+
+section article ul li.mine{text-align: right;}
+section article ul li.mine span{background-color: rgba(255,200,120,1); color:#333;}
+
+section article ul li span button{width: 20px; height: 20px; border-radius:50%; text-align: center; line-height: 1; background: #ff0000; color:#fff; border:none; cursor: pointer; font-size: 12px; margin-left: 10px; padding: 0;}
+
+
+section form{width: 100%; height: 20%; display: flex; justify-content: flex-start; align-items: flex-start;}
+section form textarea{width: 70%; height: 100%; padding: 8px; resize: none; border:none; -webkit-appearance: none; -webkit-border-radius:0;}
+section form input{width: 30%; height: 100%; cursor: pointer; background: #ffaa00; color:#222; border:none; border-radius: 0; 
+	-webkit-appearance: none; -webkit-border-radius:0;
+}
+
+
+
+
+.hide{display: none;}

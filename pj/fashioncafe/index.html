@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="mariaJ">
+  <meta name="keywords" content="루이비통 사이트">
+  <meta name="discription" content="html5+CSS3 예제 연습">
+  <meta name="robots" content="all">
+  <title>Louis-vuitton</title>
+  <link rel="shortcut icon" href="images/logo.jpg">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- 건너뛰기 시작 -->
+  <a href="#contentsArea" id="skipNav">본문 바로가기</a>
+  <!-- id="wrapper" 시작 -->
+  <div id="wrapper">
+    <header id="header">
+      <h1 class="logo">
+        <a href="index.html"><img src="images/logo1.png" alt="luilogo"></a>  
+      </h1>
+      <ul class="infoLink">
+        <li><a href="index.html">홈</a></li>
+        <li><a href="logoin.html">로그인</a></li>
+        <li><a href="join.html">회원가입</a></li>
+        <li><a href="sitemap.html">사이트맵</a></li>
+        <li><a href="english.html">ENGLISH</a></li>
+      </ul>  <!-- /class="infoLink" -->
+      <nav>
+        <h1 class="hidden">메인메뉴</h1>
+        <ul class="mainMenu">
+          <li><a href="">ABOUT</a>
+              <ul class="aboutHtml">
+                <li><a href="introduce.html">about</a></li>
+                <li><a href="#">history</a></li>
+                <li><a href="#">new</a></li>
+              </ul>
+          </li>
+          <li><a href="#">WHAT'S NEW</a>
+              <ul class="aboutCss">
+                <li><a href="#">for women</a></li>
+                <li><a href="#">for men</a></li>
+              </ul>
+          </li>
+          <li><a href="#">여성</a>
+              <ul class="webStandard">
+                <li><a href="#">핸드백</a></li>
+                <li><a href="#">지갑</a></li>
+                <li><a href="#">악세사리</a></li>
+                <li><a href="#">의류</a></li>
+              </ul>
+          </li>
+          <li><a href="#">남성</a>
+              <ul class="webAccessibility">
+                <li><a href="#">가방</a></li>
+                <li><a href="#">지갑&가죽 소품</a></li>
+                <li><a href="#">여행가방</a></li>
+                <li><a href="#">의류</a></li>
+              </ul>
+          </li>
+          <li><a href="#">묻고 답하기</a>
+            <ul class="qna">
+              <li><a href="qna.html">묻고 답하기</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">1대1 질문</a></li>
+            </ul>
+          </li>
+          <li><a href="#">MAGAZINE</a>
+            <ul class="archive">
+              <li><a href="gallery.html">fashion show</a></li>
+              <li><a href="#">street fashion</a></li>
+            </ul>
+          </li>
+        </ul> <!-- /class="mainMenu" -->
+      </nav>
+    </header>
+    
+    <div id="visual">
+      <p> Louis-vuitton </p>
+    </div>
+    <div id="contentsArea">
+      <div id="usefulArea">
+        <section class="login">
+          <h1>로그인</h1>
+          <form action="login.php" method="post">
+            <fieldset>
+              <legend> 회원 로그인 폼</legend>
+              <p>
+                 <label for="userId">아이디</label>
+                 <input type="text" id="userId" required placeholder="Guest">
+              </p>
+              <p>
+                <label for="userPw">비밀번호</label>
+                <input type="password" id="userPw" required placeholder="4자이상 8자이하">
+              </p>
+              <p><button type="submit">로그인</button></p>
+            </fieldset>
+          </form>
+          <div class="memberLink">
+            <a href="#" class="join">회원가입</a>
+            <a href="#" class="find">아이디/비밀번호 찾기</a>
+          </div>
+        </section> <!-- /class="login" -->
+        <section class="validation">
+          <h1 class="hidden">유효성 검사</h1>
+          <ul>
+            <li><a href="https://m.blog.naver.com/hsmc1985/221780279476">2020 fashion trend</a></li>
+            <li><a href="https://www.fashionn.com/board/read_new.php?table=1028&number=27843">2019 fashion trend</a></li>
+          </ul>
+        </section><!-- /class="validation" -->
+        <section class="term">
+          <h1>NEW신상품</h1>
+          <a href="#">
+            <dl>
+              <dt>LV 트레일 스니커즈</dt>
+              <dd> <img src="images/shoe.png" alt="신발사진"> </dd>
+              <dd>버질 아블로가 2020년 봄-여름 남성 패션쇼에서 선보인 LV 트레일 스니커즈. 스웨이드 송아지 가죽과 경량의 메쉬 소재로 제작하고 아웃도어 감성을 곁들인 모델. 모노그램 플라워 모티프가 들어간 기능성 겉창과 옆면의 비통 시그니처 자수 장식이 특징.</dd>
+            </dl>
+          </a>
+        </section> <!-- /class="term" -->
+      </div>  <!-- /id="usefulArea" -->
+      <div id="infoArea">
+        <section class="search">
+          <h1 class="hidden">루이비통 명품 검색</h1>
+          <form action="search.php" method="get" id="searchForm">
+            <fieldset>
+              <legend>검색폼</legend>
+              <label for="keyword">자료검색</label>
+              <input type="text" id="keyword" placeholder="검색어를 입력하세요.">
+              <button type="submit">검색</button>
+            </fieldset>
+          </form>
+        </section> <!-- /class="search" -->
+        <div class="board">
+          <section id="notice">
+            <h1><a href="#notice">패션 컬렉션</a></h1>
+            <ul>
+              <li>
+                <a href="#">2020 NEW 트위스트 컬렉션</a>
+                <time datetime="2020-07-09">2020-07-09</time>
+              </li>
+              <li>
+                <a href="#">여성 샌들 컬렉션</a>
+                <time datetime="2020-07-09">2020-07-09</time>
+              </li>
+              <li>
+                <a href="">2020 봄 컬렉션 모든 정보</a>
+                <time datetime="2020-07-09">2020-07-09</time>
+              </li>
+              <li>
+                <a href="#">크루즈 컬렉션</a>
+                <time datetime="2020-07-09">2020-07-09</time>
+              </li>
+              <li>
+                <a href="#">타임머신 퓨처리즘, 2020 F/W 루이비통 컬렉션</a>
+                <time datetime="2020-07-09">2020-07-09</time>
+              </li>
+            </ul>
+            <a href="#" class="more" title="공지사항 더보기">더보기</a>
+          </section>
+          <section id="pds">
+            <h1><a  href="#pds">패션 트렌드</a></h1>
+            <ul>
+              <li>
+                <a href="#">컬러풀한 가죽</a>
+                <time datetime="2020-07-09">2020-07-09</time>
+              </li>
+              <li>
+                <a href="#">트로피컬 프린트</a>
+                <time datetime="2020-07-09">2020-07-09</time>
+              </li>
+              <li>
+                <a href="#">생기넘치는 오렌지룩</a>
+                <time datetime="2020-07-09">2020-07-09</time>
+              </li>
+              <li>
+                <a href="">70년대</a>
+                <time datetime="2020-07-09">2020-07-09</time>
+              </li>
+              <li>
+                <a href="">쇼츠 슈트</a>
+                <time datetime="2020-07-09">2020-07-09</time>
+              </li>
+            </ul>
+            <a href="#" class="more" title="자료실 더보기">더보기</a>            
+          </section>
+        </div>  <!-- /class="board" -->
+        <section class="news">
+          <h1>루이 비통 2020 FW 멘즈 컬렉션</h1>
+          <article>
+            <a href="#">
+                <h1>루이 비통 2020 FW 멘즈</h1>
+                <time datetime="2020-09-09">2020-09-09</time>
+                <p>파리 패션위크의 최대 이벤트, 버질 아블로의 루이 비통 2020 가을, 겨울 남성 컬렉션이 공개됐다. 2020 가을, 겨울은 버질 아블로와 루이 비통이 함께한 네 번째 계절. 컬렉션은 “Heaven on Earth”, 지구 위의 천국을 주제로, 천국을 배경으로 펼쳐졌다.</p>
+                <figure>
+                  <img src="images/rivew.png" alt="사이트 리뉴얼 뉴스">
+                  <figcaption>루이 비통 2020 FW</figcaption>
+                </figure>
+            </a>
+          </article>
+          <a href="#" class="more" title="새소식 더보기">더보기</a>  
+        </section> <!-- /class="news" -->
+      </div> <!-- /id="infoArea" -->
+      <div id="linkArea">
+        <div class="eventRelatedArea">
+          <section class="event">
+            <h1><span>그랑팔레전시</span></h1>
+            <div id="eventDetail">
+              <a href="#">
+                <img src="images/pic.png" alt="그랑팔레전시 오프닝행사">
+                <p><em>그랑팔레전시</em>오프닝행사</p>
+              </a>
+            </div><!-- /id="eventDetail" -->
+            <div class="btnEventArea">
+              <a href="#" class="btnEventPre">이전 이벤트 보기</a>
+              <a href="#" class="btnEventNext">다음 이벤트 보기</a>
+            </div> <!-- /id="btnEventArea" -->
+          </section> <!-- /class="event" -->
+          <section class="relatedLink">
+            <h1><span>명품 사이트</span></h1>
+            <ul>
+              <li><a href="#">Gucci</a></li>
+              <li><a href="#">Rolex</a></li>
+              <li><a href="#">Cartier</a></li>
+              <li><a href="#">Prada</a></li>
+              <li><a href="#">Burberry</a></li>
+            </ul>
+          </section> <!-- /class="relatedLink" -->
+        </div>
+        <section class="hotLink">
+          <h1>인기 <span>사이트</span></h1>
+          <ol>
+            <li class="no1"><a href="#">Louis-vuitton</a><em class="up">상승</em></li>
+            <li class="no2"><a href="#">Gucci</a><em class="down">하락</em></li>
+            <li class="no3"><a href="#">Rolex</a><em class="stop">유지</em></li>
+            <li class="no4"><a href="#">Prada</a><em class="up">상승</em></li>
+          </ol>
+          <a href="#" class="more" title="인기 사이트 더보기">더보기</a>
+        </section>
+      </div> <!--/id="linkArea"-->
+    </div> <!--/id="contentsArea"-->
+    <section id="slogan">
+      <h1>LOUIS VUITTON 슬로건</h1>
+      <p><q>VOLEZ, VOGUE, VOYAGEZ.</q>           LOUIS VUITTON</p>
+      <footer class="hidden">출처:LOUIS VUITTON</footer>
+    </section>
+    <footer id="footer">
+      <div id="footerInner">
+        <a href="index.html" class="footerLogo">
+          <img src="images/logo1.png" alt="luilogo"></a>
+        <section class="guide">
+          <h1 class="hidden">사이트 이용안내</h1>
+          <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">개인정보 보호정책</a></li>
+            <li><a href="#">이메일 주소 무단 수집거부</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Site map</a></li>
+          </ul>
+        </section>
+        <address>
+          <span>서울시 강남구 삼성동 511</span>
+          <span>전화 :02-222-1111</span> 
+          <span>E-mail : <a href="korea@contact.louisvuitton.com">korea@contact.louisvuitton.com</a></span>
+        </address>
+        <p class="copyright">Copyright since &copy; 2010 by louisvuitton Corporation all rights reserved</p>
+
+      </div><!-- /id="footerInner" -->
+    </footer>
+  </div> <!-- /id="wrapper" -->
+</body>
+</html>

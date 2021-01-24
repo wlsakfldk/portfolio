@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+
+    <title>Celebrity</title>
+    <style>
+        body { font-family: '맑은 고딕', sans-serif;}
+
+        /* 사이트이름 */
+        .site h1 a { color: #9c27b0; 
+            text-decoration: none;  }
+        .site h1 { margin: 0;
+            font-size: 30px; 
+            font-weight: normal; font-family: 'Paytone One', sans-serif; }
+        /* 네비게이션 */
+        .menu ul { margin: 0; 
+            padding: 0;
+            list-style: none;  }
+        .menu li a { display: block; 
+            padding: 15px; 
+            color: #ffffff;
+            font-size: 14px; 
+            text-decoration: none; }
+        .menu li a:hover { background: #661a74; }
+        .menu ul:after { content: ''; display: block; clear: both; }
+        .menu li { float: left;
+            width: auto;  }
+        /* 기사 분류 */
+        .story-cat { margin-bottom: 25px; }
+        .story-cat ul { margin: 0;
+            padding: 0;
+            list-style: none; }
+        .story-cat li a { display: block;
+            margin-right: 5px; 
+            padding: 3px 5px;
+            border-radius: 2px;
+            background: #9c27b0;
+            color: #ffffff; 
+            text-decoration: none; 
+            font-size: 12px; }
+        .story-cat li a:hover { background: #661a74; }
+        .story-cat li { float: left; 
+            width: auto; }
+        .story-cat ul:after { content: '';
+            display: block; 
+            clear: both; }
+        /* 기사 */
+        .story h1 { margin-top: 0;
+            margin-bottom: 20px;  
+            font-size: 36px;
+             }
+        .story p { margin-top: 0;
+            margin-bottom: 20px; }
+        .story img { max-width: 100%;
+            height: auto; }
+        /* 기사의 작성일 */
+        .story-info { margin-top: -10px; 
+            margin-bottom: 20px; }
+        .story-info i { font-size: 20px; 
+            margin-right: 5px;
+            color: #000000; }
+        /* 기사 소 제목 */
+        .story h2 { margin-top: 40px;
+            padding-left: 10px;
+            border-left: solid 10px #5a1566;
+            font-weight: normal; }
+        /* SNS 공유 버튼 */
+        .share { margin-top: 40px; }
+        .share ul { margin: 0; 
+            padding: 0; 
+            list-style: none; }
+        .share ul:after { content: ''; display: block; clear: both; }
+        .share li a { display: block; 
+            padding: 10px 5px; 
+            color: #ffffff;
+            font-size: 14px; 
+            text-align: center; 
+            text-decoration: none; }
+        .share-tw { background: #55acee;}
+        .share-fb { background: #3b5998;}
+        .share-gp { background: #dd4b39;}
+        .share li { float: left; width: 33.33333%; }
+        /* 관련기사 메뉴 */
+        .relation { margin-top: 40px;
+            padding: 20px;
+            background: #9e9e9e28; }
+        .relation h1 { margin-top: 0; 
+            margin-bottom: 5px; 
+            color: #302f2f; 
+            font-size: 20px;
+            font-weight: normal; }
+        .relation ul { margin: 0;
+            padding: 0; 
+            list-style: none; }
+        .relation ul:after { content: ''; 
+            display: block; clear: both; }
+        .relation li a { display: block;
+            padding: 5px; 
+            color: #000000; 
+            font-size: 14px;
+            text-decoration: none; }
+        .relation li a:hover { text-decoration: underline; }
+        .relation li { float: left; 
+            width: 25%; }
+        .relation img { max-width: 100%; 
+            height: auto;
+            border: none; }
+        /* 사이드 메뉴 */
+        .sidemenu { margin-bottom: 30px; }
+        .sidemenu h1 { margin-top: 0;
+            margin-bottom: 10px; 
+            border-bottom: dotted 2px #3f51b5;
+            color: #3f51b5;
+            font-size: 18px;  } 
+        .sidemenu ul { margin: 0;
+            padding: 0;
+            list-style: none;  }
+        .sidemenu li a { display: block;
+            padding: 5px; 
+            color: #000000;
+            font-size: 14px; 
+            text-decoration: none; }
+        .sidemenu li a:hover { background: #3f51b51e; }
+        .sidemenu i { margin-right: 5px;
+            color: #3f51b5; }
+        /* 추천 기사 */
+        .recommend { margin-bottom: 30px; }
+        .recommend ul { margin: 0;
+            padding: 0;
+            list-style: none; 
+            }
+        .recommend li a { display: block; 
+            text-decoration: none;
+            font-size: 14px;
+            color: #000000;  
+            padding: 0; 
+            margin-bottom: 10px; }
+        .recommend li a:hover { background: #3f51b51e;
+            opacity: 0.8; }
+        .recommend h1 { margin-top: 0;
+            margin-bottom: 10px; 
+            border-bottom: dotted 2px #3f51b5;
+            color: #3f51b5;
+            font-size: 18px;  } 
+        .recommend img { width: 100%; 
+            height: auto; 
+            border: none; 
+            vertical-align: bottom; }
+        .recommend .text { padding: 5px 10px; 
+            background: rgba(121, 112, 172, 0.5);
+            color: #ffffff;  }
+        .recommend a { position: relative; }
+        .recommend .text { position: absolute;
+            left: 0;
+            bottom: 0; 
+            width: 100%; 
+            box-sizing: border-box; }
+        /* 인기 기사 메뉴 */
+        .popular h1 { margin-top: 0;
+            margin-bottom: 10px;
+            border-bottom: dotted 2px #3f51b5;
+            color: #3f51b5; 
+            font-size: 18px; }
+        .popular ul { margin: 0;
+            padding: 0;
+            list-style: none;  }
+        .popular li a { display: block;
+            padding: 0;
+            border-bottom: dotted 1px #3f51b5;
+            color: #000000; 
+            font-size: 14px;
+            text-decoration: none; }
+        .popular li a:hover { background: #3f51b51e; }
+        .popular li a img { border: none; }
+        .popular a:after { content:'';
+            display: block;
+            clear: both; }
+        .popular img { float: left;
+            width: 60px;
+             }
+        .popular .text { float: none;
+            width: auto; 
+            margin-left: 15px;
+             }
+        .popular span { display: block; 
+            color: #3f51b5;
+            font-size: 12px; }
+        /* 저작권 */
+        .copyright p { margin: 0;
+            color: #3f51b5;
+            font-size: 14px; }
+        /* box2를 바의 형태로 디자인 */
+        .box2 { background: #9c27b0; }
+        /* 박스의 위아래 간격 */
+        .box1 { padding-top: 8px;
+            padding-bottom: 30px; }
+        .box3 { padding-top: 40px;
+            padding-bottom: 30px;  }
+        .box4 { padding-top: 40px;
+            padding-bottom: 30px; }
+        .box5 { padding-top: 15px;
+            padding-bottom: 15px;
+            border-top: solid 1px #3f51b5; }
+
+    @media (max-width: 599px) {
+        /* 네비게이션 */
+        .menu li a { padding: 10px 3px; 
+            font-size: 11px; }
+        /* 사이트 이름과 기사의 제목 */
+        .site h1 { font-size: 20px; }
+        .story h1 { font-size: 26px; }
+        /* 박스 위아래 간격 */
+        .box1 { padding-top: 4px;
+            padding-bottom: 4px; }
+        .box3 { padding-top: 25px; }
+        /* sns 공유버튼 */
+        .share span { display: inline-block;
+            text-indent: -99999px; }
+        /* 관련기사 메뉴 */
+        .relation { padding: 10px;
+            }
+        .relation li { width: 50%; }
+        .relation li a { text-align: center; }
+        .relation li:nth-child(3) { clear: both; }
+
+        }
+    @media (min-width: 600px) and (max-width: 767px) {
+        /* box4-1과 box4-2를 가로정렬하는 설정 */
+        .box4:after { content: ''; display: block;
+            clear:both; }
+        .box4-1 { float: left;
+            width: 50%;
+            padding-right: 20px;
+            box-sizing: border-box; }
+        .box4-2 { float: left;
+            width: 50%; 
+            padding-left: 20px;
+            box-sizing: border-box; }
+
+    }
+    @media (min-width: 768px) { 
+        .boxA:after { content:''; 
+            display: block;
+            clear: both;  }
+        .box3 { float: left; 
+            width: 70%; 
+            padding-right: 50px; 
+            box-sizing: border-box; }
+        .box4 { float: left; 
+            width: 30%; }
+
+    }
+    @media (min-width: 1040px) {
+    /* 전체 너비를 고정 */
+    .box1, .box2-inner, .boxA, .box5-inner { width: 1000px; 
+        margin-left: auto; 
+        margin-right: auto; }
+    }
+
+    </style> 
+</head>
+<body>
+    <div class="box1">
+        <header class="site">
+            <h1><a href="index.html">
+                Celebrity</a></h1>
+        </header>
+    </div>
+    <div class="box2">
+        <div class="box2-inner">
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">메인</a></li>
+                    <li><a href="#">방송</a></li>
+                    <li><a href="#">영화</a></li>
+                    <li><a href="#">가요</a></li>
+                    <li><a href="#">해외문화</a></li>
+                    <li><a href="#">문의</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <section class="boxA">
+        <div class="box3">
+            <article class="story">
+                <div class="story-cat">
+                    <ul>
+                        <li><a href="#">왓챠</a></li>
+                        <li><a href="#">넷플릭스</a></li>
+                    </ul>
+                </div>
+                <h1>배두나·공유·이준, 넷플릭스 '고요의 바다' 캐스팅 확정…정우성 제작</h1>
+                <div class="story-info">
+                    <time datetime="2019-08-10"><i class="far fa-clock"></i> 2019년 8월 10일 </time>
+                </div>
+                <p><img src="img/mainnews.png" alt="연예인이미지"></p>
+                <p>배우 정우성이 제작자로 변신한 '고요의 바다'에 배우 배두나 공유 이준이 출연한다. 넷플릭스(Netflix) 측은 18일 배두나 공유 이준의 새 오리지널 시리즈 '고요의 바다' 캐스팅 확정 소식을 알렸다.</p>
+    
+                <h2>정우성 제작</h2>
+                <p>정우성이 제작자로 변신해 화제를 불러일으킨 '고요의 바다'는 필수 자원 고갈로 황폐해진 미래의 지구를 배경으로 달에 버려진 연구기지에 의문의 샘플을 회수하러 가는 정예 대원들의 이야기다. 동명의 단편 영화를 연출했던 최항용 감독이 확장된 이야기로 다시 연출을 맡았고, 영화 '마더'의 박은교 작가가 각본을 썼다.</p>
+
+                <h2>공개예정일</h2>
+                <p>일명 ‘고요의 바다’라고도 불리는 달에서의 목숨을 건 임무 수행과 기지의 비밀을 밝히려는 세 배우의 연기 시너지가 기대를 모은다. SF 미스터리 스릴러 장르로 예고된 '고요의 바다'는 오직 넷플릭스에서 공개될 예정이다.</p>
+
+                
+                <div class="share">
+                    <ul>
+                        <li><a href="#" class="share-tw"><i class="fab fa-twitter"></i><span>Twitter</span>로 공유</a></li>
+                        <li><a href="#" class="share-fb"><i class="fab fa-facebook-f"></i><span>Facebook</span>으로 공유</a></li>
+                        <li><a href="#" class="share-gp"><i class="fab fa-google-plus-g"></i><span>Google+</span>로 공유</a></li>
+                    </ul>
+                </div>
+            </article>
+            <article class="relation">
+                <h1>관련기사</h1>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="img/mul.png" alt="">
+                            <p class="text">영화 뮬란 스트리밍 개봉에 디즈니+ 앱 다운로드 급증</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/site-150x150.png" alt="">
+                            <p class="text">충주 국제무예액션영화제 홈페이지·SNS채널 개설</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/jo-150x150.png" alt="">
+                            <p class="text">'사라진 시간' 정진영·조진웅 판타지아영화제 특별언급상</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/te-150x150.png" alt="">
+                            <p class="text">영화 '테넷' 70개국 극장가 상륙…코로나 시험대 등판</p>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+        </div>
+        <div class="box4">
+            <div class="box4-1">
+                <article class="sidemenu">
+                    <h1>특집 기사</h1>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-caret-right"></i>티빙, '킹 리어' 등 국내 미개봉 외화 27편 공개</a></li>
+                        <li><a href="#"><i class="fas fa-caret-right"></i>카카오TV 오리지널 콘텐츠, 일주일만에 조회수 1천300만 넘어</a></li>
+                        <li><a href="#"><i class="fas fa-caret-right"></i>블랙핑크 '하우 유 라이크 댓', K팝 최단 시간 5억뷰 돌파</a></li>
+                        <li><a href="#"><i class="fas fa-caret-right"></i>박보검 입대 전 마지막 드라마 '청춘기록' 6.4％ 출발</a></li>
+                    </ul>
+                </article>
+                <article class="recommend">
+                    <h1>추천기사</h1>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/woodz.png" alt="">
+                                <p class="text">'뭉쳐야 찬다' 우즈(조승연), 아이돌 축구팀 에이스 맹활약</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/ien.png" alt="">
+                                <p class="text">이은상, 탄탄한 홀로서기…10대의 치명미 ‘Beautiful Scar’</p>
+                            </a>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+            <div class="box4-2">
+                <article class="popular">
+                <h1>인기기사</h1>
+                <ul>
+                    <li>
+                        <a href="#" >
+                            <img src="img/woodz-60x60.png" alt="">
+                            <p class="text">'싱어송라이터부터 운동까지' 조승연, 못 하는 게 없는 만능돌!<span>아이돌</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/ien-60x60.png" alt="">
+                            <p class="text">'솔로 데뷔' 이은상 "상처와 흉터, 성숙 위한 아름다운 계기"<span>아이돌</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/temin-60x60.png" alt="">
+                            <p class="text">태민 "새 앨범은 스릴러…영화 캐릭터 같은 모습 만나보세요"<span>아이돌</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/wo-60x60.png" alt="">
+                            <p class="text">클리오, 김우석 한정판 아이템 '완판' 노린다<span>아이돌</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/bts-60x60.png" alt="">
+                            <p class="text">방탄소년단 '다이너마이트' MV, 15일 만에 3억뷰 돌파<span>아이돌</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/bla-60x60.png" alt="">
+                            <p class="text">블랙핑크 정규 1집, 6일 만에 선주문량 80만장 돌파<span>아이돌</span></p>
+                        </a>
+                    </li>
+                </ul>
+                </article>
+            </div>
+        </div>      
+    </section>
+    <div class="box5">
+        <footer class="box5-inner">
+            <div class="copyright">
+                <p>Copyright &copy; Celebrity</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

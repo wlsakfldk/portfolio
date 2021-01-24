@@ -1,0 +1,133 @@
+@charset 'utf-8'; 
+
+.rslides { list-style: none; 
+    position: relative; 
+    overflow: hidden; 
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+    }
+
+.rslides li { position: absolute; 
+    width: 100%; 
+    left: 0; 
+    top: 0;
+    display: none;  }
+
+.rslides li:first-child { display: block; 
+    position: relative; 
+    float: left; }
+
+.rslides li img { display: block; 
+    width: 100%; 
+    border: 0;
+    height: auto; 
+    float: left; }
+
+div#contents { background: url(../images/bg_footer.jpg) no-repeat bottom;
+    padding-bottom: 95px; }
+
+div#contents section#news { margin-left: 5px; 
+}
+
+div#contents section#news h2 { margin: 0 5px 15px 0;
+    background: url(../images/bg_headerLine.jpg) repeat-x bottom;
+    padding-bottom: 10px; 
+}
+
+div#contents section#news article h3 {  font-size: 0.7em; 
+    background: url(../images/icn_arrow.jpg) no-repeat left center; 
+    margin-bottom: 10px; 
+    padding-left: 7px; }
+
+div#contents section#news article p { font-size: 0.8em; 
+    margin: 0 0 20px 10px; 
+    line-height: 1.4; }
+
+div#contents section#news article p a { text-decoration: underline; }
+
+div#contents section#news article p a:hover { text-decoration: none; }
+
+div#contents section#information { text-align: center; 
+    margin-left: 5px; }
+
+div#contents section#information h2 { text-align: left; 
+    margin: 0 5px 15px 0; 
+    background: url(../images/bg_headerLine.jpg) repeat-x bottom;
+    padding-bottom: 10px; }
+
+div#contents section#information ul li { width: 100%; 
+    margin-left: 5px; }
+
+div#contents section#information ul li img { width: 98%;
+    height: auto; 
+    max-width: 470px; }
+
+a#pagetopBtn img { position: fixed; 
+    bottom: 10px;
+    right: 1px; }
+
+
+@media all and (min-width:769px) {
+    /* PC및 대형 태블릿 레이아웃 769-960px */
+    header { position: static; 
+        overflow: visible; }
+
+    header h1 { float: left; 
+    padding: 15px 5px 7px; 
+    width: 300px; 
+    text-align: left; }
+
+    header h1 img { width: 100%; }
+
+    header ul#s_nav { float: right; 
+        margin-top: 20px; 
+        position: static; }
+
+    header ul#s_nav li { float: left; 
+        position: static; }
+
+    /* 글로벌 네비게이션 */
+    nav { border-bottom: 3px double #000; 
+        margin: 10px auto 15px; }
+
+    nav ul li { width: 16.5%; 
+        border-bottom: none; 
+        border-right: 1px dotted #000; 
+        }
+
+    nav ul li:nth-child(odd) { width: 16.5%; 
+        border-bottom: none; }
+
+    nav ul li:last-child { border-right: none; }
+
+
+
+}
+
+@media all and (min-width:961px) {
+    /* PC및 대형 태블릿 레이아웃 961이상 */
+    header { width: 960px; 
+        margin: 0 auto; }
+
+    nav { max-width: 960px; }
+
+    nav ul { margin-left: auto;
+        margin-right: auto; }
+
+    nav ul li:first-child { border-left: 1px dotted #000; } 
+
+    nav ul li:last-child { border-right: 1px dotted #000; }
+
+    div#contents { max-width: 960px; 
+        margin: 0 auto; }
+    
+    div#contents section#news { width: 49%; 
+        float: left; }
+    
+    div#contents section#information { width: 49%; 
+        float: right; }
+
+    footer { text-align: center;  }
+
+}

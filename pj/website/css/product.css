@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/*프로그램 공통*/
+#product_box{width: 1200px; margin: 0 auto; padding: 40px 0;}
+#product_box h2{border-bottom: 1px solid #ccc; font-size: 20px; padding-bottom: 10px;}
+
+#product_box .buttons{padding: 20px 0; text-align: right; font-size: 0;}
+#product_box .buttons li{display: inline-block; margin: 0 5px;}
+#product_box .buttons li button{padding: 10px 20px; font-size: 16px; border:none; border-radius:4px; background-color: #edefed; cursor: pointer;}
+#product_box .buttons li:hover button{background-color: #21bda1; color:#fff;}
+
+/*프로그램 등록(product_form.php)*/
+#product_box #product_form{border-bottom: 1px solid #ccc;}
+#product_box #product_form li{padding: 10px 0; font-size: 0;}
+#product_box #product_form li > div{display: inline-block; font-size: 14px; color:#777; vertical-align: top; padding: 0 10px;}
+
+#product_box #product_form li > div.label{width: 160px;}
+#product_box #product_form li > div.label label{width: 100%;line-height: 36px; font-weight: bold;}
+
+#product_box #product_form li > div.input{width: calc(100% - 160px); position: relative;}
+
+#product_box #product_form li > div.input input{width: 100%; height: 36px; border: 1px solid #ccc; border-radius:4px;}
+#product_box #product_form li > div.input p{line-height: 36px;}
+
+#product_box #product_form li > div.input textarea{width: 100%; height: 360px; resize:none; border: 1px solid #ccc; border-radius:4px; padding: 8px 0;}
+
+#product_box #product_form li > div.input input[type='file']{border:none;width: auto; outline:none; cursor: pointer; position: absolute; top:7px;}
+
+/*프로그램 리스트(product_list.php)*/
+#product_list{width: 100%; height:auto; padding: 20px 10px 0; margin-bottom: 20px; font-size: 0;}
+#product_list li{width: calc(25% - 20px); margin: 0 10px 20px; background-color: #fff; border:1px solid #ddd; padding: 10px; border-radius:4px; display: inline-block; vertical-align: top; cursor: pointer; transition: box-shadow 0.5s;}
+
+#product_list li:hover{box-shadow:0 0 12px rgba(0,0,0,0.75);}
+
+#product_list li .pd_img{width: 100%; height: 200px; position: relative; overflow: hidden; border-radius: 3px; /*background-color: #aaffff;*/}
+#product_list li .pd_img img{height: 120%; position: absolute; left:50%; top:50%; transform:translate(-50%, -50%); transition: transform 0.5s;}
+
+#product_list li:hover .pd_img img{transform:translate(-50%, -50%) scale(1.05);}
+
+#product_list li .pd_title{padding: 10px 0; font-size: 18px; color:#555;}
+#product_list li .pd_sub{text-overflow: ellipsis; white-space: nowrap; overflow: hidden; padding-bottom: 10px; font-size: 16px; color:#777;}
+
+#product_list li .pd_info{border-top: 1px solid #e7e7e7; padding: 10px 0; display: flex; justify-content: space-between; align-items: center;}
+
+#product_list li .pd_info .pd_price{font-weight: bold; color:#21bda1; font-size: 14px;}
+#product_list li .pd_info .pd_price span{font-size: 17px;}
+#product_list li .pd_info .pd_fav{font-size: 14px; color:#777;}
+
+
+/*프로그램 상세페이지(product_view.php)*/
+#product_detail{width: 1200px; margin: 0 auto; padding: 40px 0; display: flex; justify-content: space-between; align-items: flex-start;}
+#product_detail .pd_view{width: calc(50% - 20px); height: 360px; margin: 0 10px; background-size: cover; background-position: 50% 50%; background-color: #dedede;}
+#product_detail .pd_txt{width: calc(50% - 20px); margin: 0 10px; }
+#product_detail .pd_txt .pd_title{padding: 10px 0; font-size: 22px; color:#555;}
+#product_detail .pd_txt .pd_sub_title{padding-bottom: 20px;font-size: 16px; color:#21bda1;}
+#product_detail .pd_txt .pd_content{font-size: 14px; color:#777; padding-bottom: 10px; border-bottom: 1px solid #ccc;}
+#product_detail .pd_txt .pd_etc{padding: 10px 0; display: flex; justify-content: space-between; align-items: center;}
+#product_detail .pd_txt .pd_etc .pd_price{font-size: 20px; color:#21bda1; font-weight: bold;}
+#product_detail .pd_txt .pd_etc .pd_price span{font-size: 24px;}
+
+#product_detail .pd_txt .pd_etc .pd_fav a{font-size: 15px; color:#777;}
+
+
+
+

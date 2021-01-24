@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FD-갤러리</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico"> <!-- /*없으면 끝에 png 붙이면 적용됨*/ -->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/favicon.ico">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/flat.min.js"></script> <!-- /*아래에 적용해야 됨*/ -->
+    <style>
+        /* 모바일용 */
+        #wrap { display: flex; flex-flow: column nowrap; width: 80%; margin: 0 auto; max-width: 1200px; } 
+        #wrap section { box-sizing: border-box; }
+
+        /* 인포메이션 영역 */
+        .info-section { order: 1; width: 100%; background: #2ecc71; border-bottom: 1px solid #39d67c; }
+        .info-list { display: flex; }
+        .info-list li { width: 25%; text-align: center; }
+        .info-list li a { display: block;  padding: 15px 0; padding: 0.938rem; } /*초록색 한줄 만들어짐*//*0을 무조건 써야 그부분만 적용*/
+
+        /* 헤더 영역 */
+        .header { order: 2; display: flex; flex-direction: column; position: relative; width: 100%; } /*위드쓰 백퍼면 꽉찬형태*/
+
+        .logo { order: 1; width: 100%; padding: 30px 0; padding: 1.875rem 0; font-size: 1.188em; font-size: 1.188rem; 
+            line-height: 22px; line-height: 1.375rem; background: #2ecc71; text-align: center; text-transform: uppercase; 
+            text-shadow: 0 1px 1px #25ab5e; }
+        .nav { order: 2; width: 100%; }
+        .gnb li { display: flex; background: #2c3e50; } /*나란히 정렬시키기 위해 플렉스*/
+        .gnb li a {width: 80%; padding: 20px 0; padding: 1.250rem; font-size: 0.938em; font-size: 0.938rem; 
+            text-indent: 20px; text-indent: 1.250rem; font-weight: bold; text-transform: uppercase;  } /*들여쓰기 텍스트 인덴트*/
+
+        .gnb li span { width: 20%; text-indent: -99999px; background: url('images/s_images/sub_menu_toggle_btn.png') no-repeat center; }
+
+        .menu-toggle-btn { display: block; width: 30px; width: 1.875rem; height: 30px; height: 1.875rem; 
+            background: url('images/s_images/menu_toggle_btn.png') no-repeat; position: absolute;
+            top: 10px; top: 0.625rem; right: 10px; right: 0.625rem; text-indent: -99999px;   
+            cursor: pointer; } /*앱솔루트하면 화면 합쳐짐 지정안하면 왼쪽위*//*안보이게 텍스트인덴트 구구구구구*/
+
+        /* 서브 헤더 영역 */ 
+        .sub-header-section { order: 3; background: #219af7; padding: 48px 0; padding: 3.000rem 0;
+            text-align: center; } 
+        .sub-header-section h2 { font-size: 1.313em; font-size: 1.313rem; color: #ffffff; margin-bottom: 12px; margin-bottom: 0.750rem; }
+        .sub-header-section li { display: inline; font-size: 0.813em; font-size: 0.813rem;  }
+
+        /* 콘텐츠 영역 */
+        .content-section { order: 4; padding: 20px; padding: 1.250rem;
+            background: #ffffff; } /*반응형이라 하얀색 적용 한번더 */
+        .gallery-list img { width: 100%; max-width: 100%; border-radius: 5px; 
+            transition: all 0.4s; filter: grayscale(1); } /*그레이스케일은 회색깔로 변함*/
+        .gallery-list img:hover { filter: grayscale(0); } /*갖다대면 원래색으로 변함*/
+        .gallery-list li { margin-top: 20px; margin-top: 1.250rem; }
+        .gallery-list li:first-child { margin-top: 0; }
+
+        .content-row2 { display: flex; justify-content: space-between;
+            margin:30px 0 40px 0;  margin: 1.875rem 0 2.500rem 0; } /*비트윈하면 오른쪽 끝으로 감*/
+        .search-window { width: 120px; width: 7.500rem; height: 30px; height: 1.875rem; 
+            font-size: 0.688em; font-size: 0.688rem; line-height: 28px; line-height: 1.750rem;
+            text-indent: 10px; text-indent: 0.625rem; color: #e32d2d; }
+
+        .search-select-box {display: none; }    
+        .write-box a { display: block; width: 70px; width: 4.375rem; 
+            height: 30px; height: 1.875rem; font-size: 0.813em; font-size: 0.813rem; 
+            line-height: 30px; line-height: 1.875rem; text-align: center; 
+            background: #e32d2d; font-weight: bold; }
+        .content-row3 { display: flex; justify-content: center; }
+        .content-row3 span { width: 28px; width: 1.750rem; 
+            height: 28px; height: 1.750rem; text-indent: -99999px; }
+        .content-row3 span.list-prev-btn { background: #2ecc71 url('images/s_images/list_prev_btn.png') no-repeat center; 
+            margin-right: 10px; margin-right: 0.625rem; }
+        .content-row3 span.list-next-btn { background: #2ecc71 url('images/s_images/list_next_btn.png') no-repeat center; 
+            margin-left: 10px; margin-left: 0.625rem; }
+        .content-row3 a { width: 28px; width: 1.750rem; font-size: 0.813em; font-size: 0.813rem; 
+            line-height: 26px; line-height: 1.625rem; border: 1px solid #219af7; color: #219af7; 
+            text-align: center; }
+        .content-row3 a:hover { background: #219af7; color: #ffffff; }
+        .content-row3 a:nth-of-type(2) { margin: 0 6px; margin: 0 0.375rem; } /*스팬도 있어서 타입으로 해야함*/
+ 
+        /* 푸터 영역 */
+        .footer {order: 5; width: 100%; background: #474747; }
+        .footer p { padding: 20px; padding: 1.250rem; font-size: 0.813em; font-size: 0.813rem; 
+            text-align: center; text-transform: uppercase; font-weight: bold; color: #ffffff; 
+            text-shadow: 0 1px 1px #191919; }
+        
+        /* 태블릿용 */
+        @media all and (min-width: 768px) {
+         /* 헤더영역 */
+         .header { flex-direction: row; }
+         .logo { position: absolute; top: 0; left: 0;  
+            width: 15.625%; z-index: 10; padding: 0; } /*밑으로 한줄로 붙음*//*위드쓰 하면 합쳐짐*//*패당 0로 해서 없앰*/
+        .logo a  {display: block; padding: 50px 0; padding: 3.125rem 0; }
+        .nav { position: relative; min-height: 80px; min-height: 5.000rem; 
+            background: #2ecc71; } /*백그라운드 넣으면 초록바탕 생김*/
+        .gnb { position: absolute; top: 100%; right: 0; z-index: 20;  /*앱솔루트하면 왼쪽에서 메뉴바생김*/
+            width: 40.10416666666667%; } /*오른쪽 밑으로 메뉴바 바뀜*/
+        .menu-toggle-btn { top: 50%; margin-top: -15px; margin-top: 0.938rem; 
+            z-index: 20; right: 30px; right: 1.875rem;  } /*30의 반 15준다*/
+
+        /* 콘텐츠 영역 */
+        .content-section { padding: 37px; padding: 2.313rem; }
+        .gallery-list { display: flex; flex-wrap: wrap; justify-content: space-between; }
+        .gallery-list li { width: 48.54651162790698%; }
+        .gallery-list li:nth-child(2) { margin-top: 0; }/*마진탑을 없애서 나란하게 만듬*/
+
+        .search-select-box { display: inline-block;
+            position: relative;  }/*디스플레이 넌으로 한것을 인라인블럭으로 */
+        .search-select-box span { display: inline-block; 
+            width: 80px; width: 5.000rem; height: 30px; height: 1.875rem; 
+            font-size: 0.813em; font-size: 0.813rem; line-height: 28px; 
+            line-height: 1.750rem; text-align: center; color: #ffffff; 
+            background: #e65d5d; cursor: pointer; } /*라인하이트 빈공간 뺀게 28*/
+        .search-select-list { position: absolute; top: 105%; left: 0; width: 100%; 
+            display: none; }
+        .search-select-list li { background:#e65d5d; padding: 7px 0;
+            padding: 0.438rem 0; font-size: 0.750em; font-size: 0.750rem; 
+            text-indent: 10px; text-indent: 0.625rem; color: #ffffff; 
+            cursor: pointer; }
+        .search-select-box:hover, .search-select-list { display: block; }/*마우스를 올리면 보이게 하기위해 블럭으로 */
+        /* 푸터 영역 */
+        .footer p { padding: 40px 0; padding: 3.333rem 0; }
+        
+
+        }
+
+
+    </style>
+</head>
+<body>
+<!-- #wrap>section.info-section+header.header+section.sub-header-section+section.content-section+footer.footer>p -->
+<div id="wrap">
+    <section class="info-section">
+        <!-- ul.info-list>li>a>img -->
+        <ul class="info-list">
+            <li><a href="index.html"><img src="images/s_images/info_icon_01.png" alt="홈으로"></a></li>
+            <li><a href="find.html"><img src="images/s_images/info_icon_02.png" alt="비밀번호찾기"></a></li>
+            <li><a href="join.html"><img src="images/s_images/info_icon_03.png" alt="회원가입"></a></li>
+            <li><a href="search.html"><img src="images/s_images/info_icon_04.png" alt="검색"></a></li>
+        </ul>
+    </section> <!-- class="info-section" -->
+    <header  class="header">
+        <!-- h1.logo+nav.nav+span.menu-toggle-btn -->
+        <h1 class="logo">
+            <a href="index.html">flat<br>design</a>
+        </h1>
+        <nav class="nav">
+            <!-- ul.gnb>li>a+span.sub-menu-toggle-btn -->
+            <ul class="gnb">
+                <li><a href="index.html">홈</a>
+                    <span class="sub-menu-toggle-btn">하위메뉴토글버튼</span>
+                </li>
+                <li><a href="introduce.html">플랫디자인이란</a>
+                    <span class="sub-menu-toggle-btn">하위메뉴토글버튼</span>
+                </li>
+                <li><a href="gallery.html">갤러리</a>
+                    <span class="sub-menu-toggle-btn">하위메뉴토글버튼</span>
+                </li>
+                <li><a href="board.html">문의사항</a>
+                    <span class="sub-menu-toggle-btn">하위메뉴토글버튼</span>
+                </li>
+            </ul>
+        </nav>
+        <span class="menu-toggle-btn">전체 메뉴 토글 버튼</span>
+    </header> <!-- class="header" -->
+    <section class="sub-header-section">
+        <!-- h2+ul.breadcrum-list>li>a -->
+        <h2>갤러리</h2>
+        <ul class="breadcrum-list">
+            <li><a href="index.html">홈 /</a></li>
+            <li><a href="gallery.html">갤러리</a></li>
+        </ul>
+    </section> <!-- class="sub-header-section" -->
+    <section class="content-section">
+       <!-- .content-row1+.content-row2+.content-row3 -->
+       <div class="content-row1">
+           <!-- ul.gallery-list>li>a>img -->
+           <ul class="gallery-list">
+               <li><a href="#"><img src="images/p_images/sub_gallery_01.jpg" alt=""></a></li>
+               <li><a href="#"><img src="images/p_images/sub_gallery_02.jpg" alt=""></a></li>
+               <li><a href="#"><img src="images/p_images/sub_gallery_03.jpg" alt=""></a></li>
+               <li><a href="#"><img src="images/p_images/sub_gallery_04.jpg" alt=""></a></li>
+               <li><a href="#"><img src="images/p_images/sub_gallery_05.jpg" alt=""></a></li>
+               <li><a href="#"><img src="images/p_images/sub_gallery_06.jpg" alt=""></a></li>
+               <li><a href="#"><img src="images/p_images/sub_gallery_07.jpg" alt=""></a></li>
+               <li><a href="#"><img src="images/p_images/sub_gallery_08.jpg" alt=""></a></li>
+               <li><a href="#"><img src="images/p_images/sub_gallery_09.jpg" alt=""></a></li>
+               <li><a href="#"><img src="images/p_images/sub_gallery_10.jpg" alt=""></a></li>
+               <li><a href="#"><img src="images/p_images/sub_gallery_11.jpg" alt=""></a></li>
+               <li><a href="#"><img src="images/p_images/sub_gallery_12.jpg" alt=""></a></li>
+           </ul>
+       </div>
+       <div class="content-row2">
+           <!-- .search-box>form>input+.search-select-box -->
+           <div class="search-box">
+               <form action="abc.html" method="get">  <!-- /*보여주는게 겟 안보이는게 포스트*/ -->
+                   <input type="text" class="search-window" placeholder="검색어"> <!-- /*플레이스홀더 검색창에 뜨는 글자*/ -->
+                   <div class="search-select-box">
+                    <!-- span+ul.search-select-list>li -->
+                    <span>검색 대상</span>
+                    <ul class="search-select-list">
+                        <li>제목</li>
+                        <li>내용</li>
+                        <li>제목+내용</li>
+                        <li>댓글</li>
+                        <li>이름</li>
+                        <li>닉네임</li>
+                        <li>아이디</li>
+                        <li>태그</li>
+                    </ul>
+                   </div>
+               </form>
+           </div>
+           <div class="write-box">
+               <a href="#">글 쓰기</a>
+            </div>
+       </div> <!-- class="content-row2" -->
+       <div class="content-row3">
+           <!-- span.list-prev-btn+a*3+span.list-next-btn -->
+           <span class="list-prev-btn">갤러리 이전 버튼</span>
+           <a href="#">1</a>
+           <a href="#">2</a>
+           <a href="#">3</a>
+           <span class="list-next-btn">갤러리 다음 버튼</span>
+       </div>
+    </section>  <!-- class="content-section" -->
+    <footer class="footer">
+        <p>copyright &copy; 2014.flat design blog all rights reserved.</p>
+    </footer> <!-- class="footer" -->
+</div>
+</body>
+</html>
